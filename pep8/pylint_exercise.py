@@ -17,7 +17,7 @@ class children(SAMPLE_PYLINT):
 
     def some_method(self, param):
         if param == 1:
-            return  True
+            return True
         elif param == 2:
             return True
         elif param        ==3:
