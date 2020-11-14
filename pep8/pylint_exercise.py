@@ -32,9 +32,7 @@ class Children(SamplePylint):
         :param param:
         :return:
         """
-        if param in (1, 2, 3):
-            return True
-        return False
+        return param in (1, 2, 3)
 
     @staticmethod
     def some_method2():
