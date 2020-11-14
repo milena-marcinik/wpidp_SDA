@@ -1,46 +1,56 @@
-import timeit
+"""
+This module contains pylint samples.
+"""
 
-class SAMPLE_PYLINT:
 
+class SamplePylint:  # pylint: disable=too-few-public-methods
+    """This class represents pylint sample."""
     def __init__(self, number):
-        self._NUMBER = number
+        self._number = number
 
-    def Divide(cls, number):
+    @staticmethod
+    def divide(number):
+        """
+
+        :param number:
+        :return:
+        """
         if number == 0:
             raise ZeroDivisionError()
 
 
-class children(SAMPLE_PYLINT):
-
-    def __init__(self, name, PARAM, *args, **kwargs):
+class Children(SamplePylint):
+    """This class represents pylint sample."""
+    def __init__(self, name, number):
+        super().__init__(number)
         self._name = name
 
-    def some_method(self, param):
-        if param == 1:
-            return True
-        elif param == 2:
-            return True
-        elif param        ==3:
-            return True
-        elif param ==3:
-            return True
-        elif param ==3:
-            return True
-        else:
-            return False
+    @staticmethod
+    def some_method(param):
+        """
 
+        :param param:
+        :return:
+        """
+        if param in (1, 2, 3):
+            return True
+        return False
+
+    @staticmethod
     def some_method2():
+        """
+
+        :return:
+        """
         print('bad implementation')
 
 
 if __name__ == '__main__':
-    sample = SAMPLE_PYLINT(10)
+    sample = SamplePylint(10)
     try:
-        sample.Divide(0)
-    except Exception:
+        sample.divide(0)
+    except ZeroDivisionError:
         pass
-    sample.Divide()
+    sample.divide(0)
 
-    obj = children
-    obj.some_method(4)
-
+    Children.some_method(4)
