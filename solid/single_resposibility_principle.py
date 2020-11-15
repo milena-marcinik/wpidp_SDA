@@ -4,11 +4,11 @@ class Computer:
         self._brand = None
         self._model = None
 
-    @property
+    @property  # zwrocic marke
     def brand(self):
         return self._brand
 
-    @brand.setter
+    @brand.setter  # ustawic marke
     def brand(self, value):
         self._brand = value
 
@@ -20,5 +20,8 @@ class Computer:
     def model(self, value):
         self._model = value
 
-    def search_inventory(self):
+
+class Inventory:
+
+    def search(self, computer: Computer):
         pass

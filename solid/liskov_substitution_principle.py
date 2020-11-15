@@ -7,18 +7,29 @@ class DeliveryBase(ABC):
         self.product_ids = product_ids
         self.user = user
 
+
+class OfflineDelivery(DeliveryBase, ABC):
+
     @abstractmethod
     def get_delivery_location(self):
         pass
 
 
-class ComputerDelivery(DeliveryBase):
+class OnlineDelivery(DeliveryBase, ABC):
+
+    @abstractmethod
+    def get_email(self):
+        pass
+
+
+class ComputerDelivery(OfflineDelivery):
 
     def get_delivery_location(self):
         pass
 
 
-class SoftwareDelivery(DeliveryBase):
+class SoftwareDelivery(OnlineDelivery):
 
-    def get_delivery_location(self):  # cannot be implemented! It's senseless!
+    def get_email(self):
         pass
+
