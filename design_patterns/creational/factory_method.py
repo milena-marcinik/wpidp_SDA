@@ -25,7 +25,7 @@ class Creator(ABC):
         return product
 
     @abstractmethod
-    def create_product(self):
+    def create_product(self) -> Product:
         pass
 
 

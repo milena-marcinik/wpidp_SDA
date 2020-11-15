@@ -26,7 +26,7 @@ class Builder(ABC):
 
 class ConcreteBuilder1(Builder):
     def __init__(self):
-        self._result: Product1 = Product1()
+        self._result: Product1 = Product1()  # tworzony zupelnie nowy produkt
 
     def reset(self):
         self._result = Product1()
