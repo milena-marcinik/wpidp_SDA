@@ -8,7 +8,7 @@ class Component(ABC):
         pass
 
 
-class Hammer(Component):
+class Hammer(Component):  # lisc
     def __init__(self, name):
         self._name = name
 
@@ -16,7 +16,7 @@ class Hammer(Component):
         print(f'{self._name} - Hammer operation')
 
 
-class Charger(Component):
+class Charger(Component):  # lisc
     def __init__(self, name):
         self._name = name
 

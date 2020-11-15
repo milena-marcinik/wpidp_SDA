@@ -14,7 +14,7 @@ class ConcreteSubscriber(Subscriber):
     def __init__(self, name):
         self._name = name
 
-    def update(self, context):
+    def update(self, context):  # context to obiekt Publishera ktory tam nizej dostaniemy
         print(f'Subscriber {self._name} has been notified with result: {context.main_state}')
         # do some stuff...
 

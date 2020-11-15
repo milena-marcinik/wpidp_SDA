@@ -7,7 +7,7 @@ class Component(ABC):
         pass
 
 
-class ConcreteComponent(Component):
+class ConcreteComponent(Component):  # np spod pizzy
 
     def execute(self):
         print('ConcreteComponent')
@@ -22,7 +22,7 @@ class BaseDecorator(Component):
         self._wrappee.execute()
 
 
-class ConcreteDecorator1(BaseDecorator):
+class ConcreteDecorator1(BaseDecorator):  # konkretne skladniki
 
     def _extra(self):
         # some operation
